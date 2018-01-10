@@ -18,15 +18,10 @@
           </tr>
         </thead>
         <tbody>
-          <ul>
-            <li *ngFor="let t of product" [routerLink]="['/accounts/' + account.id]">
-              <span (click)="view(t)">{{t.id}} - {{t.name}}</span>
-            </li>
-          </ul>
-          <tr *ngFor="let account of accounts.product" [routerLink]="['/accounts/' + account.id]">
+            <tr *ngFor="let account of accounts.product" [routerLink]="['/accounts/' + account.id]">
             <td>
-              {{ account.sku }}
-              <small>agência: {{ account.name }} / conta: {{ account.account_number }} / código do banco: {{ account.bank.code }}</small>
+              {{ account.name }}
+              <small>Nome: {{ account.sku }} / Codigo: {{ account.name }} / slug: {{ account.brand }}</small>
             </td>
           </tr>
         </tbody>
